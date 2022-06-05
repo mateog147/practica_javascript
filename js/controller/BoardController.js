@@ -11,36 +11,45 @@ export const loadView = () =>{
     let canvas = document.getElementById("canvas");
     let view = new BoardView(canvas,newBoard);
     view.render();
-
+    
     document.addEventListener("keydown",function(ev){
         ev.preventDefault()
-        view.clean()
         switch (ev.key) {
             case "w":
                 bar1.up();
-                view.clean()
                 break;
 
             case "s":
                 bar1.down();
-                view.clean();
+                
                 break;
 
             case "ArrowUp":
                 bar2.up();
-                view.clean();
+                
                 break;
 
             case "ArrowDown":
                 bar2.down();
-                view.clean();
+                
+                break;
+            
+            case " ":
+                newBoard.playing=!newBoard.playing;
+                
                 break;
         
             default:
                 break;
         }
-        window.requestAnimationFrame(view.render)
     })
 
-    
+    const controller = () =>{
+        view.play();
+        window.requestAnimationFrame(controller);
+    }
+
+    window.requestAnimationFrame(controller)
+
+
 }

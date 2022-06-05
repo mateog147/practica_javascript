@@ -13,10 +13,20 @@ render = () =>{
         let element = this.board.getElements()[i];
         draw(this.context,element)
     }
+
 }
 
 clean = () =>{
     this.context.clearRect(0,0,this.board.width,this.board.height)
+}
+
+play = () =>{
+    if(this.board.playing){
+        this.board.ball.move();
+        this.clean();
+        this.render();
+        
+    }
 }
 }
 
@@ -26,11 +36,12 @@ function draw(ctx, element) {
             ctx.fillRect(element.x, element.y, element.width, element.height);
             break;
 
-            case "circle":
-                ctx.arc(element.x, element.y, element.radius, 0,7);
-                ctx.fill();
-                ctx.closePath()
-                break;
+        case "circle":
+            ctx.beginPath();
+            ctx.arc(element.x, element.y, element.radius, 0,7);
+            ctx.closePath();
+            ctx.fill()
+            break;
     }
 }
 
