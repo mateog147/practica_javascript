@@ -10,8 +10,8 @@ Proyecto usando HTML, CSS y Js
 - 4. Que es una etiqueta h1.
 
 
-## Pagina:
-https://mateog147.github.io/laboratorio_javascript/
+## Repositorio
+https://github.com/mateog147/practica_javascript.git
 
 
 
