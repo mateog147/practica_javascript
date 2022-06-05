@@ -2,26 +2,36 @@ export class BoardView{
 constructor(canvas, board){
     this.canvas = canvas;
     this.board = board;
-    this.board.width = this.canvas.width;
-    this.board.heigth = this.canvas.heigth,
+    this.canvas.width =this.board.width;
+    this.canvas.height=this.board.height,
     this.context = canvas.getContext("2d")
 }
 
 render = () =>{
-    console.log("render")
-    for(let i = this.board.getElements.lenght -1; i >=0; i--){
-        let element = this.board.elements[i];
+    
+    for(let i = this.board.getElements().length-1; i >=0; i--){
+        let element = this.board.getElements()[i];
         draw(this.context,element)
         console.log(i)
     }
+}
+
+clean = () =>{
+    this.context.clearRect(0,0,this.board.width,this.board.height)
 }
 }
 
 function draw(ctx, element) {
     switch (element.kind) {
-        case "rectagle":
-            ctx.fillRect(element.x, element.y, element.width, element.heigt);
+        case "rectangle":
+            ctx.fillRect(element.x, element.y, element.width, element.height);
             break;
+
+            case "circle":
+                ctx.arc(element.x, element.y, element.radius, 0,7);
+                break;
     }
 }
+
+
 
