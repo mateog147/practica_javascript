@@ -6,7 +6,7 @@ export class Ball{
         this.board=board;
         this.speed_x = 3;
         this.speed_y = 0;
-        this.speed = 3
+        this.speed = 3;
         this.kind = "circle";
         this.direction = 1;
         this.bounce_angle = 0;

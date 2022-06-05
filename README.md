@@ -1,9 +1,13 @@
-## Laboratorio de Java Script Mateo Gutiérrez 
+## Practica Java Script Mateo Gutiérrez 
 
-Soluciona un juego de preguntas usando Java Script
+Ping Pong usando una arquitectura MVC.
+Proyecto usando HTML, CSS y Js
 
-## Video: 
-https://youtu.be/sHyYtir8JlI
+## Preguntas: 
+- 1. Como se renderiza un circulo dentro del canvas?
+- 2. Es posible eliminar un elemento del canvas?
+- 3. Que significa MVC?.
+- 4. Que es una etiqueta h1.
 
 
 ## Pagina:
