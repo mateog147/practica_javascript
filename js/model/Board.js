@@ -9,8 +9,8 @@ export class board {
     }
 
     getElements = ()=>{
-        let elements = this.bars;
-        //elements.push(this.ball)
+        let elements = this.bars.map((e)=>e);
+        elements.push(this.ball)
         return elements
     }
 

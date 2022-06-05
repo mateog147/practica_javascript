@@ -12,7 +12,6 @@ render = () =>{
     for(let i = this.board.getElements().length-1; i >=0; i--){
         let element = this.board.getElements()[i];
         draw(this.context,element)
-        console.log(i)
     }
 }
 
@@ -29,6 +28,8 @@ function draw(ctx, element) {
 
             case "circle":
                 ctx.arc(element.x, element.y, element.radius, 0,7);
+                ctx.fill();
+                ctx.closePath()
                 break;
     }
 }
